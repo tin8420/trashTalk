@@ -1,0 +1,105 @@
+<style>
+  .container {
+    max-width: 1280px;
+    max-height: 960px;
+    margin-top: 50px;
+  }
+
+  .col-4 {
+    height: 300px;
+  }
+
+  .card {
+    height: 250px;
+  }
+
+  .card>img {
+    max-height: 100%;
+  }
+
+  .bottom-area {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+
+  }
+
+  .btn-success {
+    height: 50px;
+  }
+
+  .show-trash {
+    border: 1px black solid;
+    border-radius: 2px;
+    width: 70%;
+    height: 100px;
+    margin: 0 15px;
+  }
+
+  form {
+    margin: 5px auto;
+  }
+
+  .form-check {
+    margin: 5px auto;
+  }
+
+  .title {
+    justify-content: center;
+    margin-top: 50px;
+  }
+</style>
+
+<div class="title d-flex">
+  <h1>挑個幹話對象呀</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="Movie Poster" />
+        <form method="POST" action="/">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="target" id="engineer" value="engineer" {{#Inspect
+              option 'engineer' }} checked {{/Inspect}}>
+            <label class="form-check-label" for="inlineRadio1">工程師</label>
+          </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          class="card-img-top" alt="Movie Poster" />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="target" id="designer" value="designer" {{#Inspect
+            option 'designer' }} checked {{/Inspect}}>
+          <label class="form-check-label" for="inlineRadio1">設計師</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          class="card-img-top" alt="Movie Poster" />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="target" id="entrepreneur" value="entrepreneur" {{#Inspect
+            option 'entrepreneur' }} checked {{/Inspect}}>
+          <label class="form-check-label" for="inlineRadio1">創業家</label>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-area d-flex ">
+      <button class="btn btn-success" type="submit">產生幹話</button>
+      </form>
+      <div class="show-trash d-flex align-items-center justify-content-center">
+        <h2>{{person}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>

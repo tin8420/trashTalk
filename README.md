@@ -9,7 +9,7 @@
 # 安裝npm 
 `npm init -y`
 
-#在npm裡輸入
+# 在npm裡輸入
 `nodemon app.js`
 
 # 開啟幹話模式吧！！

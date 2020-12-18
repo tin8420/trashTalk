@@ -9,6 +9,11 @@ const task = {
 const phrase = ['超簡單', '超容易', '超快', '超正常', '超級爽', '沒毛病', '有點抖']
 
 
+const occupation = {
+  engineer: '工程師',
+  designer: '設計師',
+  entrepreneur: '創業家'
+}
 
 function RandomArray(array) {
   const index = Math.floor(Math.random() * array.length)
@@ -16,22 +21,9 @@ function RandomArray(array) {
 }
 
 function generateTrashTalk(person) {
-  let trashTalk = ''
-  const IndexOfPhrase = Math.floor(Math.random() * phrase.length)
-  switch (person) {
-    case 'engineer':
-      trashTalk = '身為工程師 ，' + RandomArray(task.engineer)
-      break
-    case 'designer':
-      trashTalk = '身為設計師 ，' + RandomArray(task.designer)
-      break
-    case 'entrepreneur':
-      trashTalk = '身為創業家，' + RandomArray(task.entrepreneur)
-      break
-    default:
-      return trashTalk = '請選擇噴幹話對象!!!'
-  }
-  return trashTalk += phrase[IndexOfPhrase]
+  if (!person) return `請選擇職業`
+  const trashTalk = `身為${occupation[person]}，${RandomArray(task[person])}${RandomArray(phrase)}`
+  return trashTalk
 }
 
 module.exports = generateTrashTalk

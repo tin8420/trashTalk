@@ -7,7 +7,7 @@
 `git clone git@github.com:tin8420/trashTalk.git`
 
 # 安裝npm 
-`npm init -y`
+`npm install`
 
 # 在npm裡輸入
 `nodemon app.js`
